@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  max-width: 500px;
+  width: 100%;
+  min-height: 400px;
+  box-shadow: 0 2px 6px #555;
+  margin: 50px auto;
+  padding: 50px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #666;
+}
+
+form {
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  display: flex;
+}
+
+form input,
+form button {
+  flex: 3;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #555;
+  margin: 0 5px;
+}
+
+form button {
+  flex: 1;
+  background: #555;
+  color: white;
+  cursor: pointer;
+}
+
+#flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+/*#particularList {
+  background-color: aquamarine;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space - between;
+  align-items: center;
+}
+#listName {
+  width: 250px;
+  height: 50px;
+  border: 1px solid black;
+}
+#listEdit {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+#listDelete {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+#listStatus {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}*/
+#particularItem {
+  background-color: aquamarine;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space - between;
+  align-items: center;
+}
+
+#flexContainer .completed {
+  background-color: tomato;
+}
+
+#flexContainer .disable-button {
+  cursor: not-allowed;
+}
+
+#itemName {
+  width: 250px;
+  min-height: 50px;
+  word-break: break-all;
+  /*border: 1px solid black;*/
+}
+#itemEdit {
+  width: 50px;
+  height: 50px;
+  /*border: 1px solid black;*/
+  cursor: pointer;
+}
+#itemDelete {
+  width: 50px;
+  height: 50px;
+  /*border: 1px solid black;*/
+  cursor: pointer;
+}
+#itemStatus {
+  text-align: center;
+  padding: 13px 0;
+  width: 50px;
+  height: 50px;
+  /*border: 1px solid black;*/
+}
+
+img {
+  display: block;
+  padding: 30% 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 17px;
+}
+
+#editName {
+  width: 250px;
+  min-height: 50px;
+  word-break: break-all;
+}
+
+#editCancel,
+#editOk {
+  text-align: center;
+  padding: 13px 0;
+  width: 50px;
+  height: 50px;
+  /*border: 1px solid black;*/
+}
