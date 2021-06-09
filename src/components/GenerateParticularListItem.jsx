@@ -5,13 +5,14 @@ import Del from '..//delete.png';
 import Input from './input';
 import Tick from '../tick.png';
 import Cross from '../cross.png';
+import FlipMove from 'react-flip-move';
 
 const GenerateParticularListItem = React.forwardRef((props,ref) => {  
   return props.tasklist.map(item => { 
     if(item.toedit === true){
       return (
       <div id="particularItem" >
-        <Input className="names" type="text" defaultValue={item.value} ref={ref}></Input>
+        <Input className="inputdis names" type="text" defaultValue={item.value} ref={ref}></Input>
         <div className="buttons" onClick={() => props.onEditOk(item.id)}><img src={Tick} alt="Ok"/></div>
         <div className="buttons" onClick={() => props.onEditCancel(item.id)}><img src={Cross} alt="cancel"/></div>
       </div>);}

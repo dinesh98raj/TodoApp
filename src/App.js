@@ -136,9 +136,9 @@ function App() {
   return (
     <div className="App">
         <h1>to do list</h1>
-        <form>
-          <Input id="add-input" type="text" ref={inputRef} placeholder="enter your task"></Input>
-          <button id="add-button" onClick={updateList}>add</button>  
+        <form autoComplete="off">
+          <Input type="text" ref={inputRef} placeholder="enter your task"></Input>
+          <button onClick={updateList}>add</button>  
         </form>      
         { list.length ? <GenerateListContainer/> : ""}
     </div>

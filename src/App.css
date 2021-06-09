@@ -3,8 +3,12 @@
   box-sizing: border-box;
   margin: 0;
 }
+body {
+  background-color: #9266ff;
+}
 
 .App {
+  background-color: #3f3160;
   max-width: 500px;
   width: 100%;
   min-height: 400px;
@@ -29,33 +33,42 @@ form {
 
 form input,
 form button {
+  background-color: rgb(27, 112, 137);
   flex: 3;
   border: none;
   outline: none;
+  padding: 0 20px;
   border-bottom: 1px solid #555;
   margin: 0 5px;
+  border-radius: 10px;
+  color: #fff;
 }
 
 form button {
   flex: 1;
-  background: #555;
+  background-color: rgb(202, 156, 24);
   color: white;
   cursor: pointer;
 }
 
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 #flexContainer {
   display: flex;
   flex-direction: column;
 }
 
 #particularItem {
-  background-color: aquamarine;
+  background-color: #bf07ac;
   margin: 5px 0;
   padding: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
+  color: #fff;
 }
 
 #flexContainer .completed {
@@ -72,6 +85,7 @@ form button {
   flex-grow: 1;
   word-break: break-all;
   margin: auto;
+  padding: 2px 5px;
 }
 
 .buttons {
@@ -85,4 +99,14 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 17px;
+}
+
+.inputdis {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+}
+
+.inputdis:focus {
+  outline: none;
 }
