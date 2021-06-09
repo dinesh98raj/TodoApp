@@ -33,11 +33,16 @@ function App() {
     console.log("from updatelist");
     console.log(inputRef.current.value);
     console.log(list.length);
-    let regexWhiteSpace = new RegExp(/^\s+.*/);
+    let regexOnlyWhiteSpace = new RegExp(/^\s+$/);
+    let regexTrailingWhiteSpace = new RegExp(/^\s+.*/);
 
-    if(regexWhiteSpace.test(inputRef.current.value)){
-      alert("first character cannot be space");
-      inputRef.current.value = inputRef.current.value.trim(); 
+    if(regexTrailingWhiteSpace.test(inputRef.current.value)){
+      if(regexOnlyWhiteSpace.test(inputRef.current.value))
+        alert("you cant enter only space");
+      else{
+        alert("trailing spaces are not allowed");
+        inputRef.current.value = inputRef.current.value.trim();
+      } 
     }else{
       if(inputRef.current.value){
         console.log("from if of update");
