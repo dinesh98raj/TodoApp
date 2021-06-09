@@ -30,18 +30,27 @@ function App() {
   }
 
   const updateList = () =>{
+    console.log("from updatelist");
     console.log(inputRef.current.value);
     console.log(list.length);
-    if(inputRef.current.value){
-      let temp={id:Math.random()*6, value:inputRef.current.value, status:false, toedit:false};
-      console.log(temp);
-      setlist([...list].concat(temp));
-      inputRef.current.value = "";
-      //localStorage.setItem('listOfTask', JSON.stringify(list));
-    }
-    else{
+    let regexWhiteSpace = new RegExp(/^\s+.*/);
+
+    if(regexWhiteSpace.test(inputRef.current.value)){
+      alert("first character cannot be space");
+      inputRef.current.value = inputRef.current.value.trim(); 
+    }else{
+      if(inputRef.current.value){
+        console.log("from if of update");
+        let temp={id:Math.random()*6, value:inputRef.current.value.trim(), status:false, toedit:false};
+        console.log(temp);
+        setlist([...list].concat(temp));
+        inputRef.current.value = "";
+        //localStorage.setItem('listOfTask', JSON.stringify(list));
+      }
+      else{
       alert("enter something!");
     }
+  }
     /*let inputfield = document.getElementById("input");
     let value = inputfield.value;
     setlist(list.concat(value));
@@ -51,7 +60,9 @@ function App() {
   function handleDelete(id){
     console.log("from delete handle");
     console.log(id);
-    setlist([...list].filter(item => item.id !== id));
+    let confirmation = window.confirm("Are you sure want to delete?");
+    if(confirmation)
+      setlist([...list].filter(item => item.id !== id));
     console.log(list);
   }
 
