@@ -47,42 +47,14 @@ form button {
   display: flex;
   flex-direction: column;
 }
-/*#particularList {
-  background-color: aquamarine;
-  border: 1px solid #ccc;
-  margin: 10px 0;
-  padding: 10px;
-  display: flex;
-  justify-content: space - between;
-  align-items: center;
-}
-#listName {
-  width: 250px;
-  height: 50px;
-  border: 1px solid black;
-}
-#listEdit {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-}
-#listDelete {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-}
-#listStatus {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-}*/
+
 #particularItem {
   background-color: aquamarine;
-  border: 1px solid #ccc;
-  margin: 10px 0;
-  padding: 10px;
+  margin: 5px 0;
+  padding: 5px;
   display: flex;
-  justify-content: space - between;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -94,51 +66,23 @@ form button {
   cursor: not-allowed;
 }
 
-#itemName {
-  width: 250px;
-  min-height: 50px;
+.names {
+  min-width: 95px;
+  min-height: 30px;
+  flex-grow: 1;
   word-break: break-all;
-  /*border: 1px solid black;*/
+  margin: auto;
 }
-#itemEdit {
-  width: 50px;
-  height: 50px;
-  /*border: 1px solid black;*/
+
+.buttons {
+  min-width: 17px;
+  margin: 2px 5px;
   cursor: pointer;
-}
-#itemDelete {
-  width: 50px;
-  height: 50px;
-  /*border: 1px solid black;*/
-  cursor: pointer;
-}
-#itemStatus {
-  text-align: center;
-  padding: 13px 0;
-  width: 50px;
-  height: 50px;
-  /*border: 1px solid black;*/
 }
 
 img {
   display: block;
-  padding: 30% 0;
   margin-left: auto;
   margin-right: auto;
   width: 17px;
-}
-
-#editName {
-  width: 250px;
-  min-height: 50px;
-  word-break: break-all;
-}
-
-#editCancel,
-#editOk {
-  text-align: center;
-  padding: 13px 0;
-  width: 50px;
-  height: 50px;
-  /*border: 1px solid black;*/
 }
